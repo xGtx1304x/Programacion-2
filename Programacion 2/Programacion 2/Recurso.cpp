@@ -1,9 +1,7 @@
 #include "Recurso.h"
 
-Recurso::Recurso(string titulo, string autor, int anio) :
-	titulo(titulo), autor(autor), anio(anio), disponible(true) {
-	static int genId = 101;
-	id = genId++;
+Recurso::Recurso(int id, string titulo, string autor, int anio) :
+	id (id), titulo(titulo), autor(autor), anio(anio), disponible(true) {
 }
 
 void Recurso::setTitulo(string titulo) { this->titulo = titulo; }
