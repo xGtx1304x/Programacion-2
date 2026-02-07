@@ -1,41 +1,140 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
+# Archivos compilados
 *.obj
-
-# Precompiled Headers
-*.gch
+*.o
 *.pch
-
-# Linker files
 *.ilk
+*.meta
+*.rsp
 
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
+# Archivos ejecutables y librerías
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
 *.lib
+*.a
 
-# Executables
-*.exe
-*.out
-*.app
+# Archivos temporales de compilación
+*.tmp
+*.temp
+*.log
+*.tlog
 
-# debug information files
-*.dwo
+# Directorios de Visual Studio
+.vs/
+.vscode/
+.vsconfig
+.vs/
+
+# Directorios de compilación
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Oo]ut/
+[Tt]arget/
+[Pp]ublish/
+[Bb]uild/
+[Bb]uilds/
+
+# Archivos de proyecto de Visual Studio
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.opensdf
+*.sdf
+*.db
+*.cachefile
+*.aps
+*.ncb
+*.opendb
+*.db-shm
+*.db-wal
+
+# Archivos de IntelliSense
+*.ipch/
+ipch/
+*.sdf
+
+# Precompiled Headers
+*.pch
+
+# Archivos de instalador
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Archivos de empaquetado
+*.appx
+*.appxbundle
+
+# Archivos de pruebas
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Archivos de usuario
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de NuGet
+packages/
+*.nupkg
+nuget.exe
+
+# Archivos de caché
+**/__pycache__/
+*.cache
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+CMakeUserPresets.json
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de logs
+*.log
+*.idb
+
+# Archivos de depuración
+*.pdb
+*.idb
+*.ipdb
+*.iobj
+
+# Archivos de recursos compilados
+*.resources
+
+# Archivos de documentación generados
+*.xml
+*.docstates
+
+# Archivos de instalación local
+_[Rr]elease/
+_[Dd]ebug/
+
+# Archivos de ATL
+*.aps
+
+# Archivos de ReSharper
+_ReSharper*/
+*.resharper
+
+# Archivos de Team Foundation
+*.tfignore
+
+# Archivos de código temporal
+*.~*
+*~
