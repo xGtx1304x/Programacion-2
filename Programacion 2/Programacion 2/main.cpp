@@ -1,14 +1,16 @@
 #include "Libro.h"
+#include "Lista.h"
 #include <fstream>
 
 int main() {
 	ifstream in("Recursos.csv");
 	//Libro libro(101, "El Principito", "Autor", 1992, 1213141516, 215, "Aventura");
 
-	Libro libro;
-	in >> libro;
+	Lista<Recurso> recursos;
 
-	cout << libro << endl;
+	recursos.cargarCSV(in);
+
+	cout << recursos << endl;
 
 	in.close();
 

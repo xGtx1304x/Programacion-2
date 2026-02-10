@@ -20,7 +20,7 @@ public:
     int getNumPaginas();
     string getGenero();
 
-    friend ostream& operator<<(ostream& os, const Libro& l);
-    friend istream& operator>>(istream& is, Libro& l);
+    virtual void imprimir(ostream& os) const override;
+    virtual void leer(istream& is) override;
 };
 

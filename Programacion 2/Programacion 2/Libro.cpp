@@ -12,39 +12,42 @@ int Libro::getISBN() { return ISBN; }
 int Libro::getNumPaginas() { return numPaginas; }
 string Libro::getGenero() { return genero; }
 
-ostream& operator<<(ostream& os, const Libro& l) {
-	os << l.id << ",";
-	os << l.titulo << ",";
-	os << l.autor << ",";
-	os << l.anio << ",";
-	os << l.disponible << ",";
-	os << l.ISBN << ",";
-	os << l.numPaginas << ",";
-	os << l.genero;
-	return os;
+void Libro::imprimir(ostream& os) const {
+	os << id << ",";
+	os << titulo << ",";
+	os << autor << ",";
+	os << anio << ",";
+	os << disponible << ",";
+	os << ISBN << ",";
+	os << numPaginas << ",";
+	os << genero;
 }
-istream& operator>>(istream& is, Libro& l) {
+void Libro::leer(istream& is) {
+    string token;
     string linea;
 
-    // Leer una línea completa
     if (getline(is, linea)) {
         stringstream ss(linea);
-        string tokens[8];
 
-        // Separar por comas
-        for (int i = 0; i < 8; i++) {
-            getline(ss, tokens[i], ',');
-        }
+        getline(ss, token, ',');
+        id = stoi(token);
 
-        l.id = stoi(tokens[0]);
-        l.titulo = tokens[1];
-        l.autor = tokens[2];
-        l.anio = stoi(tokens[3]);
-        l.disponible = (tokens[4] == "1");
-        l.ISBN = stoi(tokens[5]);
-        l.numPaginas = stoi(tokens[6]);
-        l.genero = tokens[7];
+        getline(ss, titulo, ',');
+
+        getline(ss, autor, ',');
+
+        getline(ss, token, ',');
+        anio = stoi(token);
+
+        getline(ss, token, ',');
+        disponible = (token == "1");
+
+        getline(ss, token, ',');
+        ISBN = stoi(token);
+
+        getline(ss, token, ',');
+        numPaginas = stoi(token);
+
+        getline(ss, genero, ',');
     }
-
-    return is;
 }
