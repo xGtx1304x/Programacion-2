@@ -13,6 +13,7 @@ int Libro::getNumPaginas() { return numPaginas; }
 string Libro::getGenero() { return genero; }
 
 void Libro::imprimir(ostream& os) const {
+    os << "Libro" << ",";
 	os << id << ",";
 	os << titulo << ",";
 	os << autor << ",";
@@ -50,4 +51,18 @@ void Libro::leer(istream& is) {
 
         getline(ss, genero, ',');
     }
+}
+
+string Libro::toString() const {
+    stringstream ss;
+    ss << "Tipo: Libro" << endl;
+    ss << "ID: " << id << endl;
+    ss << "Titulo: " << titulo << endl;
+    ss << "Autor: " << autor << endl;
+    ss << "Anio: " << anio << endl;
+    ss << "Disponible: " << (disponible ? "Si" : "No") << endl;
+    ss << "ISBN: " << ISBN << endl;
+    ss << "Numero de Paginas: " << numPaginas << endl;
+    ss << "Genero: " << genero << endl;
+    return ss.str();
 }

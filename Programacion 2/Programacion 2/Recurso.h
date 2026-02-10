@@ -34,4 +34,6 @@ public:
 
     friend ostream& operator<<(ostream& os, const Recurso& r);
     friend istream& operator>>(istream& is, Recurso& r);
+
+    virtual string toString() const = 0;
 };

@@ -22,5 +22,7 @@ public:
 
     virtual void imprimir(ostream& os) const override;
     virtual void leer(istream& is) override;
+
+    virtual string toString() const override;
 };
 

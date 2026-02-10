@@ -19,14 +19,6 @@ bool Recurso::operator<(Recurso& otro) {
 	return id < otro.id;
 }
 
-void Recurso::imprimir(ostream& os) const {
-	os << id << ",";
-	os << titulo << ",";
-	os << autor << ",";
-	os << anio << ",";
-	os << disponible;
-}
-
 ostream& operator<<(ostream& os, const Recurso& r) {
     r.imprimir(os);
     return os;

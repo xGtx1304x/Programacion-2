@@ -1,18 +1,13 @@
-#include "Libro.h"
-#include "Lista.h"
-#include <fstream>
+#include "GestorRecursos.h"
 
 int main() {
-	ifstream in("Recursos.csv");
-	//Libro libro(101, "El Principito", "Autor", 1992, 1213141516, 215, "Aventura");
+	Libro* libro = new Libro(101, "El Principito", "Autor", 1992, 1213141516, 215, "Aventura");
 
 	Lista<Recurso> recursos;
 
-	recursos.cargarCSV(in);
+	recursos.insertarOrdenado(libro);
 
-	cout << recursos << endl;
-
-	in.close();
+	cout << GestorRecursos::cargarRecursos("Recursos.csv")[0]->toString() << endl;
 
 	return 0;
 }

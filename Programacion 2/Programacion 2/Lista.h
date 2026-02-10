@@ -18,6 +18,16 @@ public:
 
 	bool vacia() { return !primero; }
 
+	int getTamano() {
+		Nodo<T>* actual = primero;
+		int tamano = 0;
+		while (actual) {
+			tamano++;
+			actual = actual->getSiguiente();
+		}
+		return tamano;
+	}
+
 	void limpiar() {
 		while (primero) {
 			Nodo<T>* tmp = primero;
