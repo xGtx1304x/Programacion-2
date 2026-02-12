@@ -40,10 +40,6 @@ x86/
 [Bb]uilds/
 
 # Archivos de proyecto de Visual Studio
-*.sln
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
 *.suo
 *.opensdf
 *.sdf
